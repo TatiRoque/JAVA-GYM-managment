@@ -39,6 +39,7 @@ public class ClienteFrame extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        MenuButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,19 +49,17 @@ public class ClienteFrame extends javax.swing.JFrame {
 
         LabelDni.setText("DNI:");
 
-        NombreTextField.setText("TextNombre");
-
-        ApellidoTextField.setText("TextApellido");
-
-        DNITextField.setText("TextDni");
-
         ButtonGuardar.setText("Guardar");
 
         ButtonListar.setText("Listar");
 
         LabelTelefono.setText("Telefono:");
 
-        TextTel.setText("TextTel");
+        TextTel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextTelActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -76,6 +75,8 @@ public class ClienteFrame extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTable1);
 
         jLabel1.setText("CLIENTE");
+
+        MenuButton.setText("Menú");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,18 +109,27 @@ public class ClienteFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                                 .addComponent(LabelApellido)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ApellidoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(ApellidoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(261, 261, 261)
-                        .addComponent(jLabel1)))
-                .addContainerGap(127, Short.MAX_VALUE))
+                        .addGap(262, 262, 262)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
+                        .addComponent(MenuButton)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(MenuButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelApellido)
                     .addComponent(NombreTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -134,9 +144,9 @@ public class ClienteFrame extends javax.swing.JFrame {
                         .addComponent(DNITextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(LabelDni)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonListar)
-                    .addComponent(ButtonGuardar))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButtonGuardar)
+                    .addComponent(ButtonListar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(241, 241, 241))
@@ -144,6 +154,10 @@ public class ClienteFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TextTelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextTelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextTelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,6 +202,7 @@ public class ClienteFrame extends javax.swing.JFrame {
     private javax.swing.JLabel LabelApellido;
     private javax.swing.JLabel LabelDni;
     private javax.swing.JLabel LabelTelefono;
+    private javax.swing.JButton MenuButton;
     private javax.swing.JLabel Nombre;
     private javax.swing.JTextField NombreTextField;
     private javax.swing.JTextField TextTel;
