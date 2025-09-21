@@ -153,8 +153,9 @@ public class EntrenadorFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_ListarButtonActionPerformed
 
     private void MenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MenuButtonActionPerformed
+        new MenuFrame().setVisible(true);  // abre el menú
+        dispose(); // cierra EntrenadorFrame    }//GEN-LAST:event_MenuButtonActionPerformed
+    }
 
     /**
      * @param args the command line arguments
