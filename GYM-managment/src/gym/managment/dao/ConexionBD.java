@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexionBD {
-    // Ajusten estos valores a su entorno real
+    
     private static final String URL = "jdbc:mysql://localhost:3306/gym?useSSL=false&serverTimezone=UTC";
     private static final String USER = "root";
     private static final String PASS = "";
