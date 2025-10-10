@@ -1,9 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package gym.managment.dao;
 import gym.managment.model.Entrenador;
+import gym.managment.util.ConexionBD;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
