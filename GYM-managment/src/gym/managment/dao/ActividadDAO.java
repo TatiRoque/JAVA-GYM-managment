@@ -3,6 +3,7 @@ package gym.managment.dao;
 import gym.managment.model.Actividad;
 import gym.managment.model.Cliente;
 import gym.managment.model.Entrenador;
+import gym.managment.util.ConexionBD;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
